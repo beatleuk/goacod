@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <body>
+  	{% for domain_user in domain_users %}
+    	{% if domain_user.primaryEmail == email %} 
+			<b>{{ domain_user.name.fullName }}</b><br/>
+			{{ domain_user.primaryEmail }}
+		{% endif %}
+    {% endfor %}
+
+  </body>
+</html>
+{% endautoescape %}
